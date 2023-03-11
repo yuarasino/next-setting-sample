@@ -3,7 +3,7 @@ import { M_PLUS_1 } from "next/font/google"
 
 const mplus1 = M_PLUS_1({ subsets: [] })
 
-const theme = createTheme({
+const customTheme = createTheme({
   type: "light",
   theme: {
     fonts: {
@@ -12,4 +12,4 @@ const theme = createTheme({
   },
 })
 
-export default theme
+export default customTheme
