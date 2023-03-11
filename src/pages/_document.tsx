@@ -8,7 +8,7 @@ import Document, {
 } from "next/document"
 import React from "react"
 
-export default class _Document extends Document {
+class _Document extends Document {
   static async getInitialProps(context: DocumentContext) {
     const initialProps = await Document.getInitialProps(context)
     return {
@@ -29,3 +29,5 @@ export default class _Document extends Document {
     )
   }
 }
+
+export default _Document
