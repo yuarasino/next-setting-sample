@@ -1,13 +1,13 @@
 import { createTheme } from "@nextui-org/react"
-import { M_PLUS_1 } from "next/font/google"
+import { Yusei_Magic } from "next/font/google"
 
-const mplus1 = M_PLUS_1({ subsets: [] })
+const sansFont = Yusei_Magic({ weight: ["400"], subsets: ["latin"] })
 
 const customTheme = createTheme({
   type: "light",
   theme: {
     fonts: {
-      sans: `${mplus1.className}`,
+      sans: `${sansFont.style.fontFamily}`,
     },
   },
 })

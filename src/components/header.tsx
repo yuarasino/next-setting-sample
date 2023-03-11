@@ -18,10 +18,7 @@ const StyledHeader = styled("header", {
   w: "100%",
 })
 
-const StyledFaGithub = styled(FaGithub, {
-  verticalAlign: "middle",
-  color: "#333333",
-})
+const StyledFaGithub = styled(FaGithub, { color: "#333333" })
 
 const Header = () => {
   const toggleRef = useRef<HTMLButtonElement>(null)
@@ -29,7 +26,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <Navbar
-        maxWidth="md"
+        maxWidth="lg"
         disableBlur
         css={{
           bg: "var(--nextui--navbarBlurBackgroundColor)",
@@ -60,7 +57,11 @@ const Header = () => {
             return (
               <Navbar.Item key={title}>
                 <Link as={NextLink} href={href} scroll={false}>
-                  <Text span weight="semibold">
+                  <Text
+                    span
+                    weight="semibold"
+                    css={{ letterSpacing: "$widest" }}
+                  >
                     {title}
                   </Text>
                 </Link>
@@ -83,15 +84,23 @@ const Header = () => {
         <Navbar.Collapse>
           {menus.map(({ title, href }) => {
             return (
-              <Navbar.CollapseItem key={title}>
+              <Navbar.CollapseItem key={title} css={{ pb: "$0" }}>
                 <Link
                   as={NextLink}
                   href={href}
                   scroll={false}
                   onClick={() => toggleRef.current?.click()}
-                  css={{ dflex: "center", minWidth: "100%" }}
+                  css={{
+                    dflex: "center",
+                    minWidth: "100%",
+                    h: "var(--nextui--navbarHeight)",
+                  }}
                 >
-                  <Text span weight="semibold">
+                  <Text
+                    span
+                    weight="semibold"
+                    css={{ letterSpacing: "$widest" }}
+                  >
                     {title}
                   </Text>
                 </Link>

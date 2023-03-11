@@ -4,18 +4,9 @@ import { FaTwitter, FaYoutube, FaGithub } from "react-icons/fa"
 
 import Flex from "@/components/flex"
 
-const StyledFaTwitter = styled(FaTwitter, {
-  verticalAlign: "middle",
-  color: "#1da1f2",
-})
-const StyledFaYoutube = styled(FaYoutube, {
-  verticalAlign: "middle",
-  color: "#ff0000",
-})
-const StyledFaGithub = styled(FaGithub, {
-  verticalAlign: "middle",
-  color: "#333333",
-})
+const StyledFaTwitter = styled(FaTwitter, { color: "#1da1f2" })
+const StyledFaYoutube = styled(FaYoutube, { color: "#ff0000" })
+const StyledFaGithub = styled(FaGithub, { color: "#333333" })
 
 const links = [
   { FaIcon: StyledFaTwitter, href: "https://twitter.com/yuarasino" },
@@ -30,7 +21,7 @@ const StyledFooter = styled("footer", {
 const Footer = () => {
   return (
     <StyledFooter>
-      <Container display="flex" justify="space-between" md>
+      <Container display="flex" justify="space-between" lg>
         <Flex>
           <Text>&copy; 新篠ゆう</Text>
         </Flex>
