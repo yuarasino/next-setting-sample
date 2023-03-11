@@ -1,8 +1,8 @@
-import { styled, Navbar, Text, Link, Image } from "@nextui-org/react"
+import { styled, Navbar, Text, Link } from "@nextui-org/react"
 import NextImage from "next/image"
 import NextLink from "next/link"
 import { useRef } from "react"
-import { VscGithubInverted } from "react-icons/vsc"
+import { FaGithub } from "react-icons/fa"
 
 const menus = [
   { title: "NEWS", href: "/#news" },
@@ -18,8 +18,9 @@ const StyledHeader = styled("header", {
   w: "100%",
 })
 
-const StyledGithubIcon = styled(VscGithubInverted, {
+const StyledFaGithub = styled(FaGithub, {
   verticalAlign: "middle",
+  color: "#333333",
 })
 
 const Header = () => {
@@ -73,8 +74,8 @@ const Header = () => {
               href="https://github.com/yuarasino/yuarasino-website"
               target="_blank"
             >
-              <Text span weight="semibold" size="22px" css={{ padding: "$2" }}>
-                <StyledGithubIcon />
+              <Text span size="22px" css={{ padding: "$2" }}>
+                <StyledFaGithub />
               </Text>
             </Link>
           </Navbar.Item>
